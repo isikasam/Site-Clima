@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Climas</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script type="module" src="js/main.js"></script>
+</head>
+<body>
+  <main class="container">
+    <header class="cabecalho">
+      <h1>Climas</h1>
+      <p>Consulte as condições do tempo na sua cidade.</p>
+    </header>
+
+    <form id="form-clima" class="formulario">
+      <label for="cidade">Nome da cidade</label>
+      <div class="campo-busca">
+        <input type="text" id="cidade" placeholder="Ex.: Campinas" required>
+        <button type="submit" id="botao-buscar">Buscar</button>
+      </div>
+    </form>
+
+    <p id="mensagem" class="mensagem" role="status" aria-live="polite"></p>
+
+    <p id="boas-vindas" class="boas-vindas">
+      Selecione uma cidade acima e clique em buscar para ver a previsão completa
+    </p>
+
+    <section id="resultado" class="resultado" aria-live="polite" aria-hidden="true">
+      <h2 id="nome-cidade">Cidade</h2>
+      <img id="icone-clima" class="icone-clima" alt="Ícone representando o clima">
+      <p id="descricao-clima" class="descricao-clima"></p>
+
+      <div class="temperatura">
+        <span id="temperatura">--</span><span>°C</span>
+      </div>
+
+      <div class="informacoes">
+        <div class="informacao">
+          <span>Umidade</span>
+          <strong id="umidade">--%</strong>
+        </div>
+        <div class="informacao">
+          <span>Vento</span>
+          <strong id="vento">-- km/h</strong>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
